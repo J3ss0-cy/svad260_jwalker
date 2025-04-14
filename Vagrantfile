@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
 
 
   # Example web servers
-  (1..2).each do |i|
+  (1..10).each do |i|
     config.vm.define "web-00#{i}" do |node|
       node.vm.hostname = "web-00#{i}"
       node.vm.network "private_network", ip: "192.168.56.11#{i}"
@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
   end
 
   # Example load balancer
-  (1..1).each do |i|
+  (1..2).each do |i|
     config.vm.define "lb-00#{i}" do |node|
       node.vm.hostname = "lb-00#{i}"
       node.vm.network "private_network", ip: "192.168.56.12#{i}"
@@ -55,7 +55,7 @@ Vagrant.configure("2") do |config|
   end
 
   # Example database server
-  (1..1).each do |i|
+  (1..3).each do |i|
     config.vm.define "db-00#{i}" do |node|
       node.vm.hostname = "db-00#{i}"
       node.vm.network "private_network", ip: "192.168.56.13#{i}"

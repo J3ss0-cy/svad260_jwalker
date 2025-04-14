@@ -1,8 +1,0 @@
----
-- hosts: webservers
-  become: true
-
-  tasks:
-    - name: Build webserver
-      import_role:
-        name: webserver

@@ -1,2 +1,6 @@
+[web]
 web-001.local
 web-002.local
+
+[db]
+db-001.local
