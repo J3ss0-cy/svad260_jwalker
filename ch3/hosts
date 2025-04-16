@@ -1,6 +1,16 @@
-[web]
+[webservers]
 web-001.local
-web-002.local
+web-002 ansible_host=192.168.98.112 
 
-[db]
-db-001.local
+[webservers:vars]
+http_port=8080
+
+[load_balancers]
+lb-001.local
+
+[staging]
+web-002
+
+[production]
+web-001.local
+lb-001.local

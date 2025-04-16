@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
   # The Ansible controller machine
   config.vm.define :controller, primary: true do |controller|
     controller.vm.hostname = "ansible-controller"
-    controller.vm.network "private_network", ip: "192.168.56.100"
+    controller.vm.network "private_network", ip: "192.168.56.112"
 
     # Sync the local directory with ansible-friendly permissions
     controller.vm.synced_folder ".", "/vagrant",
